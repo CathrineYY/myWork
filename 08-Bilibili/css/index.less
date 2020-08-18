@@ -1,0 +1,47 @@
+// 写自己的样式之前，先导入一些公共样式（最后编译打包的时候，所有的CSS会合并在一起）
+@import 'reset.min.css';
+@import '../font/iconfont.css';
+@import 'common.less';
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.headerBox {
+    height: 155px;
+    background: url('../images/top_banner.png') no-repeat center center;
+    background-size: cover;
+}
+
+.logoBox {
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 100%;
+    width: 1000px;
+    position: relative;
+
+    //less中的嵌套
+    //但不要无限极的嵌套，会导致前缀过长，降低CSS渲染性能
+    h1 {
+        position: absolute;
+        box-sizing: border-box;
+        width: 162px;
+        height: 78px;
+        bottom: 10px;
+        left: 0px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

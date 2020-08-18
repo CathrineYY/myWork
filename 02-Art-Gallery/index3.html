@@ -1,0 +1,96 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Give it a try</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">  
+<script type="text/javascript">
+function change() {
+    var pic = document.getElementById("preview"),
+        file = document.getElementById("f");
+    //得到后缀名
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+ 
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+ 
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader(file);
+     }
+}
+
+function html5Reader(file){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById("preview");
+         pic.src=this.result;
+     }
+ }
+ function reP(){  
+    document.getElementById('oImg').style.display = "block";  
+ }  
+
+</script>
+</head>
+<body>
+<header>
+	<h2>Give it a try~</h2>
+	</header><!-- /header -->
+<p style="margin-left: 290px;margin-top: 40px;font-size: 26px;">选择风格:</p>
+<select style="margin-left: 290px;margin-top: 10px;font-size: 20px;">
+  <option value="朦胧风">朦胧风</option>
+  <option value="大笔触风">大笔触风</option>
+  <option value="光影风">光影风</option>
+  <option value="星空">星空</option>
+  <option value="睡莲">睡莲</option>
+  <option value="速写风">速写风</option>
+  <option value="中国古典风">中国古典风</option>
+  <option value="戴珍珠耳环的少女">戴珍珠耳环的少女</option>
+</select>
+
+<form style="margin-left: 290px;margin-top: 35px;font-size: 26px;" action="">
+    <input type="file" multiple id="f" type="file" name="f" onchange="change()" >
+
+    <INPUT TYPE="button" value='风格生成' style="margin-left: 150px;margin-top: 0 px;color: orange;width: 190px;font-size: 20px;border-radius: 10px;border-color: orange;position: fixed;" onclick="reP()">  
+</form>
+
+<table><tr>
+<td><img id="preview" alt="" src="" name="pic" class="file_img" style="margin-top: 35px;margin-left: 290px; width: 300px; height: 230px;"/></td>
+<td><img src='picture/saved_picture10.jpg' id="oImg" style='display:none;margin-top: 35px;margin-left: 100px;' width="270px" height="220px"></td>
+</tr></table>
+
+<div class="action" onclick="actionToggle();">
+		<span>+</span>
+		<ul>
+			<li><img src="picture/咖啡树.png"><a href="./index.html" /> Art Gallary</li>  
+            <li><img src="picture/咖啡豆.png"><a href="./index2.html" /> Mixed Art</li>
+            <li><img src="picture/调味品.png"><a href="./index3.html" /> Give it a Try~</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function actionToggle(){
+			var action = document.querySelector('.action');
+			action.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

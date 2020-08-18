@@ -1,0 +1,102 @@
+OCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mixed Art</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+
+<body>
+	<header>
+	<h2>Mixed  Art</h2>
+	</header><!-- /header -->
+
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<img style="height: 240px;width: 150px;" src="picture/content.jpg">
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 240px;width: 150px;" src=picture/style1.jpg>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img style="height: 300px;width: 200px;" src=picture/saved_picture1.jpg>
+			</div>
+		</div>
+	</div>	
+
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<img style="height: 240px;width: 150px;" src="picture/content.jpg">
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 240px;width: 150px;" src=picture/style6.jpg>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 300px;width: 200px;" src=picture/saved_picture6.jpg>
+			</div>
+		</div>
+	</div>	
+
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<img style="height: 240px;width: 150px;" src="picture/content.jpg">
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 240px;width: 150px;" src=picture/style9.jpg>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 300px;width: 200px;" src=picture/saved_picture9.jpg>
+			</div>
+		</div>
+	</div>	
+
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<img style="height: 200px;width: 240px;" src="picture/content2.jpg">
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 200px;width: 240px;" src=picture/style12.jpg>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<img style="height: 230px;width: 300px;" src=picture/saved_picture10.jpg>
+			</div>
+		</div>
+	</div>	
+
+	<div class="action" onclick="actionToggle();">
+		<span>+</span>
+		<ul>
+			<li><img src="picture/咖啡树.png"><a href="./index.html" /> Art Gallary</li>	
+			<li><img src="picture/咖啡豆.png"><a href="./index2.html" /> Mixed Art</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function actionToggle(){
+			var action = document.querySelector('.action');
+			action.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

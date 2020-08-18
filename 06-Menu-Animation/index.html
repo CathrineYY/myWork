@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>动画菜单特效</title>
+    <link rel="icon" href="../assets/favicon2.ico">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+    	body {
+    		background: url('../images/bg2.jpg') no-repeat;
+    	}
+    	ul {
+    		margin: 0;
+    		padding: 0;
+    		list-style: none;
+    	}
+    	a {
+    		text-decoration: none;
+    		font-weight: bold;
+    	}
+    	div,li {
+    		box-sizing: border-box;
+    	}
+    	@keyframes move {
+    		0%{
+				left: -350px;
+				color: #black;
+    		}
+    		25%{
+				left: 125px;
+				color: #4c5a7d;
+    		}
+    		50%{
+				left: 15px;
+				color: #black;
+    		}
+    		75%{
+				left: 35px;
+				color: #4c5a7d;
+    		}
+    		100%{
+				left: 15px;
+				color: #black;
+    		}
+    	}
+    	.menu-wrap {
+    		width: 400px;
+    		height: 450px;
+    		background-color: #ccc;
+    		border: 1px solid #ccc;
+    		margin: 140px auto;
+    		overflow: hidden;
+    		box-shadow: 0 0 5px 3px #eee;
+    	}
+
+    	.menu-wrap .item {
+    		height: 64px;
+    		cursor: pointer;
+    		position: relative;
+    	}
+		
+		.menu-wrap .item .order{
+			position: absolute;
+			top: 20px;
+			left: -350px;
+			animation-name: move;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+			transition: all .2s;
+		}
+		
+		.menu-wrap .item .fa {
+			position: absolute;
+			top: 21px;
+			right: 15px;
+			font-size: 20px;
+			color: #6f153c;
+		}
+    	.menu-wrap .item:hover{
+    		background-color: #fff;
+    	}
+
+    	.menu-wrap .item .order-1{
+    		animation-delay: .7s;
+    	}
+    	.menu-wrap .item .order-2{
+    		animation-delay: .6s;
+    	}
+    	.menu-wrap .item .order-3{
+    		animation-delay: .5s;
+    	}
+    	.menu-wrap .item .order-4{
+    		animation-delay: .4s;
+    	}
+    	.menu-wrap .item .order-5{
+    		animation-delay: .3s;
+    	}
+    	.menu-wrap .item .order-6{
+    		animation-delay: .2s;
+    	}
+    	.menu-wrap .item .order-7{
+    		animation-delay: .1s;
+    	}
+    </style>
+</head>
+
+
+<body>
+    <div class="menu-wrap">
+        <ul class="menu-list">
+            <li class="item">
+                <a href="" class="order order-1">Harry Potter and the Philosopher's Stone</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-2">Harry Potter and the Chamber of Secrets</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-3">Harry Potter and the Prisoner of Azkaban</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-4">Harry Potter and the Goblet of Fire</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-5">Harry Potter and the Order of Phoenix</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-6">Harry Potter and the Half-Blood Prince</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-7">Harry Potter and the Deathly Hallows</a>
+                <i class="fa fa-play-circle-o"></i>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

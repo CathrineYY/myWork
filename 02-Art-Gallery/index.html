@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../assets/favicon2.ico">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body>
+    <header>
+        <h2>Art Gallery</h2>
+    </header><!-- /header -->
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src="picture/style1.jpg">
+                <p>·大笔触风·</p>
+                <p>Matthew Snowden</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style7.jpg> <p>·戴珍珠耳环的少女·</p>
+                <p>Johannes Vermeer</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style2.jpg> <p>·颜色鲜明风·</p>
+                <p>Gene Brown</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style3.jpg> <p>·光影风·</p>
+                <p>Jan van der Kooi</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style4.jpg> <p>·朦胧风·</p>
+                <p>伯纳德·沃尔夫</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style8.jpg> <p>·向日葵·</p>
+                <p>Vincent Willem van Gogh</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style10.jpg> <p>·星空·</p>
+                <p>Vincent Willem van Gogh</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <img style="height: 300px;width: 200px;" src=picture/style11.jpg> <p>·睡莲·</p>
+                <p>Claude Monet</p>
+            </div>
+        </div>
+    </div>
+    <div class="action" onclick="actionToggle();">
+        <span>+</span>
+        <ul>
+            <li><img src="picture/咖啡树.png"><a href="./index.html" /> Art Gallary</li>
+            <li><img src="picture/咖啡豆.png"><a href="./index2.html" /> Mixed Art</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    function actionToggle() {
+        var action = document.querySelector('.action');
+        action.classList.toggle('active');
+    }
+    </script>
+</body>
+
+</html>
